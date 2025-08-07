@@ -55,5 +55,10 @@ def update(id):
         return render_template('update.html', st=st)
 
 
+@app.route('/hello')
+def hello():
+    return 'hello'
+
+
 if __name__ == "__main__":
     app.run(debug=True)
