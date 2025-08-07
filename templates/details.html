@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}details{% endblock title %}
+{% block content %}
+    <a href="{{url_for('index')}}" class="btn btn-primary"> GoBack </a>
+    <a onclick=confirmDelete() class="btn btn-danger"> delete </a>
+    <script>
+        function confirmDelete(){
+            var result = confirm('are you sure you want to delete the record?!');
+            if (result==true)
+                window.location.href = "{{ url_for('delete', id=student.id) }}";
+        }
+    </script>
+    <a href="{{ url_for('update',id=student.id) }}" class="btn btn-success"> update </a>
+    <h1>{{student.id}}</h1>
+    <h2> {{student.name}} </h2>
+    <h3> {{student.family}} </h3>
+    {% endblock content %}
+{% block bgcolor %}skyblue{% endblock bgcolor %}

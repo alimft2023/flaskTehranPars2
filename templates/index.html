@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h1> list of students </h1>
+{% for student in students %}
+    <a href="{{url_for('details', id=student.id) }}"> <h1>{{student.id}}</h1> </a>
+    <hr>
+{% endfor %}
+{% endblock content %}
+
+{% block title %}index{% endblock title %}
+{% block bgcolor %}lightpink{% endblock bgcolor %}

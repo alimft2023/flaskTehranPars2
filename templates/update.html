@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}update{% endblock title %}
+
+{% block bgcolor %}seagreen{% endblock bgcolor %}
+
+{% block content %}
+<form action="" method="POST">
+    <label for="name">name:</label>
+    <input type="text" name="n" required value="{{ st.name }}"><br><br>
+    <label for="family">family:</label>
+    <input type="text" name="f" required value="{{ st.family }}"><br><br>
+    <input type="submit" value="update">
+</form>
+{% endblock content %}
